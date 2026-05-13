@@ -1,0 +1,27 @@
+<div class="recipes-page">
+  <h1 class="recipes-page__title">Все рецепты</h1>
+
+  <div class="recipes-page__filters">
+    <input
+      class="filter-input"
+      type="text"
+      placeholder="Поиск по названию..."
+      [(ngModel)]="searchName"
+    />
+    <select class="filter-select" [(ngModel)]="selectedCategory">
+      @for (opt of categoryOptions; track opt.value) {
+        <option [value]="opt.value">{{ opt.label }}</option>
+      }
+    </select>
+  </div>
+
+  @if (filteredRecipes.length > 0) {
+    <div class="recipes-grid">
+      @for (recipe of filteredRecipes; track recipe.id) {
+        <app-recipe-card [recipe]="recipe" (selected)="onRecipeSelected($event)" />
+      }
+    </div>
+  } @else {
+    <p class="recipes-empty">Ничего не найдено. Попробуйте изменить фильтры.</p>
+  }
+</div>

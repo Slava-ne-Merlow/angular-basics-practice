@@ -1,0 +1,26 @@
+<div class="home">
+  <section class="home__hero">
+    <h1 class="home__title">Книга рецептов</h1>
+    <p class="home__subtitle">Коллекция проверенных рецептов на каждый день</p>
+    <a routerLink="/recipes" class="home__btn">Смотреть все рецепты</a>
+  </section>
+
+  <section class="home__section">
+    <h2 class="home__section-title">Популярные рецепты</h2>
+    <div class="home__grid">
+      @for (recipe of featuredRecipes; track recipe.id) {
+        <app-recipe-card [recipe]="recipe" (selected)="onRecipeSelected($event)" />
+      }
+    </div>
+  </section>
+
+  <section class="home__features">
+    @for (feature of features; track feature.title) {
+      <div class="home__feature-card">
+        <span class="home__feature-icon">{{ feature.icon }}</span>
+        <h3>{{ feature.title }}</h3>
+        <p>{{ feature.text }}</p>
+      </div>
+    }
+  </section>
+</div>

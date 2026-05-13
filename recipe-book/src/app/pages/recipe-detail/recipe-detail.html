@@ -1,0 +1,18 @@
+<div class="detail">
+  <a routerLink="/recipes" class="detail__back">← Назад к рецептам</a>
+
+  @if (recipe(); as r) {
+    <img [src]="r.image" [alt]="r.name" class="detail__image" />
+    <div class="detail__content">
+      <span class="detail__badge">{{ categoryLabels[r.category] }}</span>
+      <h1 class="detail__title">{{ r.name }}</h1>
+      <p class="detail__time">Время приготовления: {{ r.preparationTime }} минут</p>
+      <p class="detail__desc">{{ r.description }}</p>
+    </div>
+  } @else {
+    <div class="detail__not-found">
+      <p>Рецепт не найден.</p>
+      <a routerLink="/recipes">← Вернуться к рецептам</a>
+    </div>
+  }
+</div>

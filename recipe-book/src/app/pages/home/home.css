@@ -1,0 +1,92 @@
+.home {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+.home__hero {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  border-radius: 16px;
+  color: white;
+  margin-bottom: 3rem;
+}
+
+.home__title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin: 0 0 0.75rem;
+}
+
+.home__subtitle {
+  font-size: 1.1rem;
+  opacity: 0.85;
+  margin: 0 0 1.5rem;
+}
+
+.home__btn {
+  display: inline-block;
+  background: white;
+  color: #4f46e5;
+  padding: 0.75rem 2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: transform 0.2s;
+}
+
+.home__btn:hover {
+  transform: scale(1.04);
+}
+
+.home__section {
+  margin-bottom: 3rem;
+}
+
+.home__section-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1e1b4b;
+  margin: 0 0 1.5rem;
+}
+
+.home__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.home__features {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.home__feature-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+  text-align: center;
+}
+
+.home__feature-icon {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.home__feature-card h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1e1b4b;
+  margin: 0 0 0.5rem;
+}
+
+.home__feature-card p {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin: 0;
+  line-height: 1.5;
+}
