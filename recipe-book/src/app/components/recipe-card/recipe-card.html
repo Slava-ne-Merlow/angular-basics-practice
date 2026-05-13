@@ -1,0 +1,9 @@
+<div class="card" appHighlight (click)="onSelect()">
+  <img [src]="recipe().image" [alt]="recipe().name" class="card__image" />
+  <div class="card__body">
+    <span class="card__badge">{{ categoryLabels[recipe().category] }}</span>
+    <h3 class="card__title">{{ recipe().name }}</h3>
+    <p class="card__desc">{{ recipe().description | truncate }}</p>
+    <span class="card__time">{{ recipe().preparationTime }} мин</span>
+  </div>
+</div>
